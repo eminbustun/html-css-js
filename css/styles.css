@@ -1,0 +1,81 @@
+/** Fonts 
+
+font-family: "Raleway", sans-serif;
+font-family: "Roboto Condensed", sans-serif;
+
+**/
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Roboto+Condensed&display=swap");
+
+/** GENERAL SETTINGS **/
+
+* {
+  /* Tum etiketleri secme isareti --> * */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: "Raleway", sans-serif;
+  --secondary-font: "Roboto Condensed", sans-serif;
+  --primary-color: #4792a5;
+  --light-color: #efefef;
+  --dark-color: #3c3c3c;
+}
+
+html {
+  font-size: 10px;
+  color: var(--dark-color);
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 16rem; /* 16rem esittir 160px, 10 kati*/
+  padding-bottom: 8rem;
+  min-height: 100vh;
+}
+
+p {
+  font-size: 1.4rem; /* 14px*/
+  line-height: 2.4rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+}
+
+button {
+  /* The inherit keyword specifies that a property should inherit its value from its parent element. */
+  border: none;
+  color: inherit;
+  font: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  color: var();
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  /* selecting classes with .  */
+  width: 100%;
+  max-width: 114rem; /* 1140 pixel, bootsrapin container boyutu, onlar yeterince biliyorlardır diye boyle yazdik */
+  margin: 0 auto;
+}
