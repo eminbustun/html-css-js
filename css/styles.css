@@ -80,6 +80,83 @@ ul {
   margin: 0 auto;
 }
 
+/** CUSTOM Classes **/
+
+.sec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.vertical-title {
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 1rem;
+  display: inline-block;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 50%;
+  left: -5%;
+}
+
+.vertical-title-right {
+  color: var(--light-color);
+  left: 95%;
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
+
+.btn-general {
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  border-radius: 2rem;
+}
+
+.btn-light {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: var(--general-transition);
+}
+
+.btn-light:hover {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.btn-dark {
+  color: var(--light-color);
+  border: 2px solid var(--light-color);
+  transition: var(--general-transition);
+}
+
+.btn-dark:hover {
+  color: var(--primary-color);
+  background-color: var(--light-color);
+}
+
+.horizontal-title {
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.pri-background {
+  background-color: var(--primary-color);
+}
+
+.light-color {
+  color: var(--light-color);
+}
+
 /*? HERO SECTION */
 
 #hero {
@@ -246,4 +323,107 @@ ul {
   background-color: var(--dark-color);
   margin: 0.7rem;
   transition: var(--general-transition);
+}
+
+/** ABOUT SECTION **/
+
+.about-detail {
+  margin-left: 4rem;
+}
+
+/** SERVICES SECTION **/
+
+.services-detail {
+  margin-right: 4rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-arrows {
+  display: flex;
+  padding-top: 2rem;
+}
+
+#arrow-left,
+#arrow-right {
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+/** PORTFOLIO SECTION **/
+
+section#portfolio {
+  padding-top: 8rem;
+}
+
+.portfolio-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item-1 item-2 item-3 item-3"
+    "item-1 item-4 item-5 item-6" "item-7 item-7 item-8 item-6";
+}
+
+.portfolio-item {
+  width: 100%; /*! Burada 100% demek 1fr nin tamamını kapsa demek(yukarida 1fr vermistik) */
+  height: 25rem;
+  background-position: center; /*! Porfolio icindeki resimler ortalanir. */
+  background-size: cover; /*! Resmin tamamini mumkun oldugu kadar alsin. */
+  background-repeat: no-repeat; /*! Resim tekrar etmesin. */
+  position: relative;
+}
+
+.portfolio-item-1 {
+  grid-area: "item-1";
+  min-height: 50rem;
+  background-image: url("../img/portfolio-item-1.jpg");
+}
+
+.portfolio-item-2 {
+  grid-area: "item-2";
+  background-image: url("../img/portfolio-item-2.jpg");
+}
+
+.portfolio-item-3 {
+  grid-area: "item-3";
+  background-image: url("../img/portfolio-item-3.jpg");
+}
+
+.portfolio-item-4 {
+  grid-area: "item-4";
+  background-image: url("../img/portfolio-item-4.jpg");
+}
+
+.portfolio-item-5 {
+  grid-area: "item-5";
+  background-image: url("../img/portfolio-item-5.jpg");
+}
+
+.portfolio-item-6 {
+  grid-area: "item-6";
+  min-height: 50rem;
+  background-image: url("../img/portfolio-item-6.jpg");
+}
+
+.portfolio-item-7 {
+  grid-area: "item-7";
+  background-image: url("../img/portfolio-item-7.jpg");
+}
+
+.portfolio-item-8 {
+  grid-area: "item-8";
+  background-image: url("../img/portfolio-item-8.jpg");
+}
+
+.portfolio-item-9 {
+  grid-area: "item-9";
+  background-image: url("../img/portfolio-item-9.jpg");
+}
+
+.portfolio-item-10 {
+  grid-area: "item-10";
+  background-image: url("../img/portfolio-item-10.jpg");
 }
