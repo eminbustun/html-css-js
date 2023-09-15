@@ -468,6 +468,7 @@ section#portfolio {
   width: 0%;
   height: 0%;
   opacity: 0;
+  overflow: hidden;
   transition: var(--general-transition);
 }
 
@@ -686,5 +687,85 @@ footer {
   font-size: 1.4rem;
   font-weight: 300;
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
+}
+
+ul.social-list {
+  display: flex; /** Yan yana getirmenin en kolay yolu */
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+ul.social-list li {
+  padding: 0;
+  text-align: center;
+}
+
+ul.social-list li a {
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
+  display: inline-block; /** inline-block dedik ki yükseklik ve genişlik verebilelim. */
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  transition: var(--general-transition);
+}
+
+ul.social-list li i {
+  line-height: 4rem; /** Height'a 4rem vermiştik */
+}
+
+ul.social-list li:nth-child(1) a:hover {
+  background-color: #38a1f3;
+  border-color: transparent;
+}
+
+ul.social-list li:nth-child(2) a:hover {
+  background-color: #171515;
+  border-color: transparent;
+}
+
+ul.social-list li:nth-child(3) a:hover {
+  background-color: #3b5998;
+  border-color: transparent;
+}
+
+ul.social-list li:nth-child(4) a:hover {
+  background-color: #ff0000;
+  border-color: transparent;
+}
+
+.copy-right {
+  font-size: 1.4rem;
+  text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+
+.back-top {
+  justify-self: end;
+  text-align: center;
+}
+
+.back-top i {
+  font-size: 2rem;
+}
+
+.back-top a {
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  border: 0.1rem solid var(--light-color);
+  line-height: 4rem;
+  border-radius: 50%;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  transition: var(--general-transition);
+}
+
+.back-top a:hover {
+  border-color: transparent;
+  color: var(--primary-color);
+  background-color: var(--light-color);
 }
