@@ -1,3 +1,40 @@
+//* RESPONSIVE NAV MENU
+
+const navMenu = () => {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const nav = document.querySelector(".nav-list");
+
+  navbarToggler.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    navbarToggler.classList.toggle("toggle");
+  });
+};
+
+navMenu();
+
+//* END RESPONSIVE MENU
+
+//* SERVICES SLIDER
+
+const serviceChange = () => {
+  let firstChild, lastChild;
+  const arrowLeft = document.querySelector("#arrow-left");
+  const arrowRight = document.querySelector("#arrow-right");
+  const servicesAll = document.querySelector("#services-slider");
+
+  document.addEventListener("click", (e) => {
+    if (e.target === arrowLeft) {
+      lastChild = servicesAll.lastElementChild;
+      servicesAll.insertAdjacentElement("afterbegin", lastChild);
+    } else if (e.target === arrowRight) {
+      firstChild = servicesAll.firstElementChild;
+      servicesAll.insertAdjacentElement("beforeend", firstChild);
+    }
+  });
+};
+
+serviceChange();
+
 //* SCROLL REVEAL ANIMATIONS
 
 ScrollReveal().reveal(".ani-left", {
